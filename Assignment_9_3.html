@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Session 9: Assignment 9.3</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<div class="container">	
+	<div class="row">
+		<br/><br/><br/>
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+			<form name="regst">
+			  <div class="form-group">
+				<label for="uname">Username</label>
+				<input type="text" class="form-control" id="uname" placeholder="User name" required>
+			  </div>
+			  <div class="form-group">
+				<label for="email">Email Address</label>
+				<input type="email" class="form-control" id="email" placeholder="Email" required>
+			  </div>
+			<div class="textCenter">
+			  <input type="button" class="btn btn-block btn-primary" id="btnReg" value="Register"/>
+			 </div> 
+			</form>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+		<table class="table table-condensed">
+		   <thead>
+			  <tr>
+				 <th>Sr.no</th>
+				 <th>Username</th>
+				 <th>Email</th>
+			  </tr>
+		   </thead>
+		   <tbody>
+			  <tr>
+				 <th scope="row">1</th>
+				 <td id="unames"></td>
+				 <td id="emails"></td>
+			  </tr>
+		   </tbody>
+		</table>
+		</div>
+	</div>
+</div>	
+<script src="js/jq.js" type="text/javascript" language="javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#btnReg").on("click",function(){
+		$("#unames").text($("#uname").val()); // set username value in table td username
+		$("#emails").text($("#email").val()); // set email value in table td email
+	});
+});
+</script>
+</body>
+</html>
